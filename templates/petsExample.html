@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link
+            rel="stylesheet"
+            href="{{ url_for('static', filename='styles.css') }}"
+        />
+        <title>Pets example</title>
+    </head>
+    <body>
+        <h1>Pets</h1>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Pets Name</th>
+            </tr>
+
+            {% for i in data %}
+            <tr>
+                <td>{{ i.user }}</td>
+                <td>{{ i.pets_name }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
